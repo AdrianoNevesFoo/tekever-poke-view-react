@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Col, Pagination, Row } from "antd";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -26,10 +27,10 @@ export default function Home() {
   }, [limit, currentPage]);
 
   return (
-    <div width="100%">
+    <div>
       {/* link to favorites page */}
       <Link to="/favorites">My Favorites</Link>
-      
+
       {/* map each poke in the list to a ShowPoke element with name and image */}
       <Row align="middle" gutter={[10, 10]}>
         {pokes?.map(({ name, url }) => (
