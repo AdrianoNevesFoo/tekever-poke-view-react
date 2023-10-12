@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
-import { Typography, Row, Col, Image, Space, Card, Flex, Button } from "antd";
+import { Typography, Row, Col, Image, Card, Flex, Button } from "antd";
 import { Link, useSearchParams } from "react-router-dom";
 import axios from "axios";
 
 export default function Details() {
   const { Title, Text } = Typography;
   // state containing the fetched details of the poke
-  const [details, setDetails] = useState();
+  const [details, setDetails] = useState<any>([]);
   // get search params from router
   const [params] = useSearchParams();
   //get values from search params
